@@ -85,8 +85,6 @@ const MenuItem = styled(ExternalLink)`
   }
 `
 
-
-
 export default function Menu() {
   const { account } = useActiveWeb3React()
 

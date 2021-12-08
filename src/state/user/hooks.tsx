@@ -5,7 +5,6 @@ import { shallowEqual, useDispatch, useSelector } from 'react-redux'
 import { BASES_TO_TRACK_LIQUIDITY_FOR, PINNED_PAIRS } from '../../constants'
 // import {PINNED_PAIRS } from '../../constants'
 
-
 import { useActiveWeb3React } from '../../hooks'
 // import { useAllTokens } from '../../hooks/Tokens'
 import { useDefaultTokens } from '../../hooks/Tokens'

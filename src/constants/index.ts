@@ -25,11 +25,16 @@ export const FRAX = new Token(ChainId.MAINNET, '0x853d955aCEf822Db058eb8505911ED
 export const FXS = new Token(ChainId.MAINNET, '0x3432B6A60D23Ca0dFCa7761B7ab56459D9C964D0', 18, 'FXS', 'Frax Share')
 export const renBTC = new Token(ChainId.MAINNET, '0xEB4C2781e4ebA804CE9a9803C67d0893436bB27D', 8, 'renBTC', 'renBTC')
 
-// findora forge tokens  
+// findora forge tokens
 export const JOF = new Token(ChainId.FINDORA_FORGE, '0x1EffB1D9F0b5AF8385CA00583f5531a7E7781883', 18, 'JOF', 'Jollof')
 // export const WBTC = new Token(ChainId.FINDORA_FORGE, '0x2212FD79EB1a9aebA137cD7083Dee6A3f02B5B1a', 18, 'WBTC', 'Wrapped BTC')
-export const WBNB = new Token(ChainId.FINDORA_FORGE, '0x80f8bFD81F4958B4b35dFb6fd6268839d7EDC428', 18, 'WBNB', 'Wrapped BNB')
-
+export const WBNB = new Token(
+  ChainId.FINDORA_FORGE,
+  '0x80f8bFD81F4958B4b35dFb6fd6268839d7EDC428',
+  18,
+  'WBNB',
+  'Wrapped BNB'
+)
 
 // Block time here is slightly higher (~1s) than average in order to avoid ongoing proposals past the displayed time
 export const AVERAGE_BLOCK_TIME_IN_SECS = 13
@@ -47,7 +52,13 @@ export const UNI: { [chainId in ChainId]: Token } = {
   [ChainId.ROPSTEN]: new Token(ChainId.ROPSTEN, UNI_ADDRESS, 18, 'UNI', 'Uniswap'),
   [ChainId.GÖRLI]: new Token(ChainId.GÖRLI, UNI_ADDRESS, 18, 'UNI', 'Uniswap'),
   [ChainId.KOVAN]: new Token(ChainId.KOVAN, UNI_ADDRESS, 18, 'UNI', 'Uniswap'),
-  [ChainId.FINDORA_FORGE]: new Token(ChainId.FINDORA_FORGE, '0x1EffB1D9F0b5AF8385CA00583f5531a7E7781883', 18, 'JOF', 'Jollof')
+  [ChainId.FINDORA_FORGE]: new Token(
+    ChainId.FINDORA_FORGE,
+    '0x1EffB1D9F0b5AF8385CA00583f5531a7E7781883',
+    18,
+    'JOF',
+    'Jollof'
+  )
 }
 
 export const COMMON_CONTRACT_NAMES: { [address: string]: string } = {
@@ -110,10 +121,9 @@ export const SUGGESTED_BASES: ChainTokenList = {
 // used to construct the list of all pairs we consider by default in the frontend
 export const BASES_TO_TRACK_LIQUIDITY_FOR: ChainTokenList = {
   ...WETH_ONLY,
-  [ChainId.MAINNET]: [...WETH_ONLY[ChainId.MAINNET], DAI, USDC, USDT, WBTC], 
+  [ChainId.MAINNET]: [...WETH_ONLY[ChainId.MAINNET], DAI, USDC, USDT, WBTC],
   [ChainId.FINDORA_FORGE]: [...WETH_ONLY[ChainId.FINDORA_FORGE], JOF, WBNB]
 }
-
 
 export const PINNED_PAIRS: { readonly [chainId in ChainId]?: [Token, Token][] } = {
   // [ChainId.MAINNET]: [
@@ -125,7 +135,7 @@ export const PINNED_PAIRS: { readonly [chainId in ChainId]?: [Token, Token][] } 
   //   [DAI, USDT]
   // ],
   [ChainId.FINDORA_FORGE]: [
-    [JOF, WBNB],
+    [JOF, WBNB]
     // [FIP, HID],
     // [LOS, HID]
   ]

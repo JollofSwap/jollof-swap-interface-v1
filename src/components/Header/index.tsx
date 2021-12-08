@@ -351,7 +351,10 @@ export default function Header() {
           {/* <StyledNavLink id={`stake-nav-link`} to={'/vote'}>
             Vote
           </StyledNavLink> */}
-          <StyledExternalLink id={`stake-nav-link`} href={'http://dev-chainbridge.s3-website-us-west-2.amazonaws.com/transfer'}>
+          <StyledExternalLink
+            id={`stake-nav-link`}
+            href={'http://dev-chainbridge.s3-website-us-west-2.amazonaws.com/transfer'}
+          >
             Bridge <span style={{ fontSize: '11px' }}>↗</span>
           </StyledExternalLink>
         </HeaderLinks>
